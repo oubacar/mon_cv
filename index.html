@@ -4,35 +4,114 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline';">
-  <title>CV - Aboubacar Sylla</title>
+  <title>CV - Boubacar Sylla</title>
   <style>
-    body {
+    /* Reset */
+    * {
       margin: 0;
-      background-color: #f9f9f9;
-      font-family: sans-serif;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f4f8;
+      color: #333;
       display: flex;
       flex-direction: column;
-      align-items: center;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #005f73;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    header h1 {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.1em;
+    }
+
+    .pdf-container {
+      flex-grow: 1;
+      display: flex;
+      justify-content: center;
+      padding: 20px;
     }
 
     iframe {
       width: 100%;
       max-width: 960px;
-      height: 90vh;
-      border: none;
+      height: 80vh;
+      border: 1px solid #ccc;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      margin-top: 20px;
     }
 
     .download {
-      margin: 20px;
       text-align: center;
+      margin: 20px;
     }
 
     .download a {
       display: inline-block;
-      padding: 10px 20px;
-      background-color: #005f73;
+      padding: 12px 24px;
+      background-color: #0a9396;
       color: white;
       text-decoration: none;
-      border-radius: 5px;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .download a:hover {
+      background-color: #005f73;
+    }
+
+    footer {
+      background-color: #005f73;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 0.9em;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.5em;
+      }
+
+      iframe {
+        height: 60vh;
+      }
+
+      .download a {
+        padding: 10px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>📄 Mon CV Professionnel</h1>
+    <p>Consultez ou téléchargez mon CV en toute sécurité</p>
+  </header>
+
+  <div class="pdf-container">
+    <iframe src="cv.pdf" title="CV Boubacar Sylla" allowfullscreen></iframe>
+  </div>
+
+  <div class="download">
+    <a href="cv.pdf" download>📥 Télécharger le CV</a>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Boubacar Sylla. Tous droits réservés.</p>
+  </footer>
+</body>
+</html>
